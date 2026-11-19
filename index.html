@@ -334,6 +334,9 @@ footer { padding: 10px; }
 .t-word { grid-column: span 12; background: var(--ink); color: var(--bg); min-height: 300px; justify-content: center; align-items: center; }
 .t-word span { font-size: clamp(4rem, 9vw, 9rem); letter-spacing: -0.04em; line-height: 1; }
 .t-word span i { font-style: normal; color: #2f62c4; }
+.invite { margin: 16px 0 0; font-size: 15px; color: var(--muted); }
+.invite a { color: var(--ink-2); }
+.code-link { color: var(--ink); font-weight: 600; text-underline-offset: 4px; }
 .t-cta { grid-column: span 4; background: var(--accent); color: var(--accent-ink); text-decoration: none; min-height: 300px; }
 .t-cta b { font-size: 28px; font-weight: 400; line-height: 1.15; max-width: 10ch; }
 .t-cta svg { align-self: flex-end; transition: transform .2s ease; }
@@ -371,7 +374,7 @@ footer { padding: 10px; }
     <a href="#results">Results</a>
     <a href="#limits">Limits</a>
     <a href="#questions">Questions</a>
-    <a class="btn" href="#contact">Ask for a trial</a>
+    <a class="btn" href="https://aslamcaan-tieout-app.hf.space">Open the app</a>
   </nav>
 </div>
 
@@ -382,9 +385,10 @@ footer { padding: 10px; }
     <div>
       <p class="lead after">Give tieout a company. In about 0.9 seconds it turns the filed accounts into a clean spreadsheet, redoes every sum, and tells you which numbers it proved and which to check yourself.</p>
       <div class="actions after">
-        <a class="btn" href="#contact">Ask for a trial code</a>
+        <a class="btn" href="https://aslamcaan-tieout-app.hf.space">Open the app</a>
         <a class="btn ghost" href="#how">See how it works</a>
       </div>
+      <p class="invite after">The app is invite only. <a href="https://www.linkedin.com/in/aslam-khan-7712b2337/">Message me on LinkedIn</a> for a code.</p>
     </div>
 
     <div class="panel after" data-ui id="demo" aria-label="Live example: a real balance sheet, checked">
@@ -644,7 +648,7 @@ footer { padding: 10px; }
       <li><button aria-expanded="false">Does it work for US companies?</button><div class="a"><p>Yes, for listed companies that file a 10-K with the SEC. Same standard rows, same sums. Borrowings are not read from US filings yet.</p></div></li>
       <li><button aria-expanded="false">Can it handle group accounts?</button><div class="a"><p>Yes, it reads consolidated accounts. They were a small part of the test, so the measured rate for them is less certain than for small companies.</p></div></li>
       <li><button aria-expanded="false">Will it tell me a business is in trouble?</button><div class="a"><p>Not directly. It reads and checks; the judgement is yours. A separate screen marks a few patterns as worth a closer look, such as cash that earns little interest. It fires on healthy companies too, and it never says fraud.</p></div></li>
-      <li><button aria-expanded="false">Can I try it on a company I'm looking at?</button><div class="a"><p>Yes. Ask below for a trial code and you can run any UK company, or a US listed one, from a phone or a laptop.</p></div></li>
+      <li><button aria-expanded="false">Can I try it on a company I'm looking at?</button><div class="a"><p>Yes. <a href="https://www.linkedin.com/in/aslam-khan-7712b2337/">Message me on LinkedIn</a> or ask below for an invite code, then <a href="https://aslamcaan-tieout-app.hf.space">open the app</a> and run any UK company, or a US listed one, from a phone or a laptop.</p></div></li>
     </ul>
     <div class="pane" id="pane" aria-live="polite"></div>
   </div>
@@ -659,11 +663,13 @@ footer { padding: 10px; }
       <input name="company" id="company" aria-label="Company name or number" placeholder="Company name or number" autocomplete="off">
       <button type="submit" aria-label="Send request"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
     </form>
-    <p class="next">This opens an email to me. I'll reply with a trial code and the company's one-pager.</p>
+    <p class="next">This opens an email to me. I'll reply with an invite code for the app and the company's one-pager.</p>
     <dl>
       <dt>Built by</dt><dd>Aslam Khan</dd>
       <dt>Email</dt><dd><a href="mailto:ak2195@sussex.ac.uk">ak2195@sussex.ac.uk</a></dd>
       <dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/aslam-khan-7712b2337/">Message me on LinkedIn</a></dd>
+      <dt>App</dt><dd><a href="https://aslamcaan-tieout-app.hf.space">aslamcaan-tieout-app.hf.space</a></dd>
+      <dt>Code</dt><dd><a href="https://github.com/aslamcaan/tieout">github.com/aslamcaan/tieout</a></dd>
     </dl>
     </div>
   </div>
@@ -673,7 +679,7 @@ footer { padding: 10px; }
 <footer>
   <div class="tiles">
     <div class="tile t-state"><p>Filed accounts, read by code, with its working shown.</p><p class="legal">A screening aid, not investment advice. Contains public sector information licensed under the Open Government Licence v3.0.</p></div>
-    <div class="tile t-built"><p><b>Built in Python</b>Readers for tagged filings, PDFs and scans (Tesseract OCR), an Excel and PDF writer, and an optional Claude fallback for line names, off by default.</p></div>
+    <div class="tile t-built"><p><b>Built in Python</b>Readers for tagged filings, PDFs and scans (Tesseract OCR), an Excel and PDF writer, and an optional Claude fallback for line names, off by default.</p><a class="code-link" href="https://github.com/aslamcaan/tieout">The code is on GitHub, MIT licence</a></div>
     <div class="tile t-word"><span>tie<i>out</i></span></div>
   </div>
 </footer>
